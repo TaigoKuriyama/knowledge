@@ -2,7 +2,7 @@
 - markdown preview
 
 ```
-［Command］＋［K］→［V］
+Command ＋ K → V
 ```
    
 ## link
