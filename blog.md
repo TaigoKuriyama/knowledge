@@ -1,4 +1,4 @@
-- はてなブログへの導入
+- はてなブログへ Google Analytics の導入
   - [Google Analytics](https://analytics.google.com/analytics/web/?hl=ja) へログイン
   - プロパティにブログサイトを追加
     - トラッキング ID (UA-xxxxxxxxxxx-x) をコピーしておく
