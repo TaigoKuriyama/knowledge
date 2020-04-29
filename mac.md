@@ -5,3 +5,5 @@
   - https://www.omoide-soko.jp/apps/wordpress/pc/1852#i-3
 - iCloud の写真を一括ダウンロード
   - https://moshbox.jp/?p=54787
+- スクリーンショット の保存先を変更
+  - スクリーンショット アプリを開き > オプション > 保存先を選択
