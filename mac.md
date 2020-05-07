@@ -9,3 +9,7 @@
   - スクリーンショット アプリを開き > オプション > 保存先を選択
 - fn * 2 で音声入力
   - システム環境設定 > キーボード > 音声入力 > ショートカット
+- プレビューのショートカット
+  - ハイライト	Command + Control + H
+  - アンダーライン Command + Control + U
+  - http://inforati.jp/apple/mac-tips-techniques/multimedia-hints/how-to-emphasize-text-of-pdf-file-with-mac-preview-app.html
