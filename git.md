@@ -2,7 +2,7 @@
 
 ## 基本
 
-### リポジトリ初期化
+### git init - リポジトリ初期化
 
 ```sh
 $ mkdir git
@@ -14,7 +14,7 @@ HEAD		description	info		refs
 config		hooks		objects
 ```
 
-### リポジトリ の状態を確認
+### git status - リポジトリ の状態を確認
 
 - masterブランチにいて、コミットが存在しない
 
@@ -28,6 +28,7 @@ nothing to commit (create/copy files and use "git add" to track)
 ```
 
 - master ブランチにて、ファイルは存在するとが追跡されていない
+   - ワーキングツリーでファイルを作成しただけでは、Gitリポジトリのバージョン管理の対象としてファイルは登録されていない
 
 ```sh
 $ ls
@@ -44,6 +45,25 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
+### git add - ステージ領域へファイルを追加
+
+- ファイルを Gitリポジトリの管理対象とするために`git add`コマンドを利用してステージ領域と呼ばれる場所にファイルを登録
+
+```sh
+$ git add README.md
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README.md
+```
+
+### git commit リポジトリの歴史を記録
 
 ## 応用
 
@@ -73,3 +93,5 @@ fatal: Exiting because of an unresolved conflict.
   - `git init`コマンドを実行したディレクトリ以下のこと 
 - コミット
   - ワーキングツリーにある全てのファイルのその時点の状態を記録すること
+- ステージ領域
+  - コミットをする前の一時領域
