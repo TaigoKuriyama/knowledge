@@ -65,6 +65,20 @@ Changes to be committed:
 
 ### git commit リポジトリの歴史を記録
 
+- `git commit`コマンドはステージ領域に登録されている時点のファイル群を実際にリポジトリの歴史として記録する
+
+```sh
+$ git commit -m "First Commit"
+[master (root-commit) 9b7066c] First Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+```
+
+### フロー
+
+![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
+
+
 ## 応用
 
 ### コミットメッセージの変更
@@ -89,9 +103,13 @@ fatal: Exiting because of an unresolved conflict.
   ファイルやディレクトリの状態を記録する場所で、保存された状態は、内容の変更履歴として格納される
 - リポジトリデータ
   - `.git` ディレクトリに存在するワークツリー以下を管理するファイルたち
-- ワークツリー
+- ワークツリー(ワーキングツリー)
   - `git init`コマンドを実行したディレクトリ以下のこと 
 - コミット
-  - ワーキングツリーにある全てのファイルのその時点の状態を記録すること
+  - ワークツリーにある全てのファイルのその時点の状態を記録すること
 - ステージ領域
   - コミットをする前の一時領域
+  
+## 参考 URL
+
+- https://git-scm.com/
