@@ -46,10 +46,15 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-### git add - ステージ領域へファイルを追加
+### git add
+
+- いくつかの機能がある
+   - 新しいファイルの追跡開始
+   - ステージ領域へファイルを追加
+   - マージ時に衝突が発生したファイルに対する「解決済み」マーク付け
 
 - ファイルを Gitリポジトリの管理対象とするために`git add`コマンドを利用してステージ領域と呼ばれる場所にファイルを登録
-	- `Changes to be committed:`以下がステージ領域にされているファイル
+   - `Changes to be committed:`以下がステージ領域にされているファイル
 
 ```sh
 $ git add README.md
@@ -103,7 +108,7 @@ fatal: Exiting because of an unresolved conflict.
 ## 用語
 
 - リポジトリ
-  ファイルやディレクトリの状態を記録する場所で、保存された状態は、内容の変更履歴として格納される
+  - ファイルやディレクトリの状態を記録する場所で、保存された状態は、内容の変更履歴として格納される
 - リポジトリデータ
   - `.git` ディレクトリに存在するワークツリー以下を管理するファイルたち
 - ワークツリー(ワーキングツリー)
