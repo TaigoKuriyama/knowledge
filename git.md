@@ -49,6 +49,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 ### git add - ステージ領域へファイルを追加
 
 - ファイルを Gitリポジトリの管理対象とするために`git add`コマンドを利用してステージ領域と呼ばれる場所にファイルを登録
+	- `Changes to be committed:`以下がステージ領域にされているファイル
 
 ```sh
 $ git add README.md
