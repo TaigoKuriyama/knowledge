@@ -16,7 +16,7 @@ config		hooks		objects
 
 ### git status - リポジトリ の状態を確認
 
-- masterブランチにいて、コミットが存在しない
+- master ブランチにいて、コミット対象が存在しない
 
 ```sh
 $ git status
@@ -27,7 +27,7 @@ Initial commit
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-- master ブランチにて、ファイルは存在するとが追跡されていない
+- master ブランチにて、ファイルは存在するが追跡されていない
    - ワーキングツリーでファイルを作成しただけでは、Gitリポジトリのバージョン管理の対象としてファイルは登録されていない
 
 ```sh
