@@ -85,8 +85,12 @@ $ git commit -m "First Commit"
 - リポジトリにコミットされたログを確認
 
 ```sh
+$ git log
+commit 6e8a1e7b11668f66c60b45c5ce955ccb165cf761 (HEAD -> master)
+Author: xxxxxxxxx <xxxxxxxxx@xxxxxx.xxx>
+Date:   Mon May 11 08:06:14 2020 +0900
 
-
+    test
 ```
 
 ### フロー
