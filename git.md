@@ -69,7 +69,7 @@ Changes to be committed:
 	new file:   README.md
 ```
 
-### git commit リポジトリの歴史を記録
+### git commit - リポジトリの歴史を記録
 
 - `git commit`コマンドはステージ領域に登録されている時点のファイル群を実際にリポジトリの歴史として記録する
 
@@ -78,6 +78,15 @@ $ git commit -m "First Commit"
 [master (root-commit) 9b7066c] First Commit
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 README.md
+```
+
+### git log - コミットログを確認
+
+- リポジトリにコミットされたログを確認
+
+```sh
+
+
 ```
 
 ### フロー
