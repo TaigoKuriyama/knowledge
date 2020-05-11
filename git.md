@@ -144,6 +144,24 @@ Merge made by the 'recursive' strategy.
  1 file changed, 4 insertions(+)
 ```
 
+### git reset --hard コミットハッシュ
+
+```sh
+$ git log
+commit 90db068cbac100ba6249e9e6f49045128536fe23 (HEAD -> master)
+Author: xxxxxxxxx <xxxxxxxxx@xxxxxxxxx.xxx>
+Date:   Tue May 12 08:03:55 2020 +0900
+
+    add test
+
+commit 9b7066ce13139b01c4b0062da33eb0ae85c0bc64
+Author: xxxxxxxxx <xxxxxxxxx@xxxxxxxxx.xxx>
+Date:   Sat May 9 08:57:05 2020 +0900
+
+    First Commit
+
+```
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
