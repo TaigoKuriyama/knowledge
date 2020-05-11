@@ -169,6 +169,29 @@ Date:   Sat May 9 08:57:05 2020 +0900
     First Commit
 ```
 
+### git refrog - リポジトリで行われた作業のログを確認
+
+- `git log` だと今の状態から過去のログしか見れない
+
+```sh
+ git reflog
+9b7066c (HEAD -> master) HEAD@{0}: reset: moving to 9b7066ce13139b01c4b0062da33eb0ae85c0bc64
+90db068 HEAD@{1}: commit: add test
+9b7066c (HEAD -> master) HEAD@{2}: reset: moving to 9b7066ce13139b01c4b0062da33eb0ae85c0bc64
+b1ef120 HEAD@{3}: checkout: moving from test to master
+30ae9ad (test) HEAD@{4}: checkout: moving from master to test
+b1ef120 HEAD@{5}: checkout: moving from master to master
+b1ef120 HEAD@{6}: merge test: Merge made by the 'recursive' strategy.
+6e8a1e7 HEAD@{7}: checkout: moving from test to master
+30ae9ad (test) HEAD@{8}: commit: add test to test
+6e8a1e7 HEAD@{9}: checkout: moving from master to test
+6e8a1e7 HEAD@{10}: commit: test
+3fad247 HEAD@{11}: commit: test
+4b420e0 HEAD@{12}: commit: test
+9b7066c (HEAD -> master) HEAD@{13}: commit (initial): First Commit
+
+```
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
