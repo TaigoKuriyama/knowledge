@@ -93,6 +93,57 @@ Date:   Mon May 11 08:06:14 2020 +0900
     test
 ```
 
+- `--graph`でブランチの分岐を視覚的に表現する
+
+```sh
+$ git log --graph
+*   commit b1ef120598526f44d60c618edfcb29532905aaed (HEAD -> master)
+|\  Merge: 6e8a1e7 30ae9ad
+| | Author: xxxxxxxxx <xxxxxxxxx@xxxxxxxxx.xxx>
+| | Date:   Tue May 12 07:53:47 2020 +0900
+| |
+| |     Merge branch 'test'
+| |
+| * commit 30ae9adf05acda9f9be221eb61104daa89ea8708 (test)
+|/  Author: xxxxxxxxx <xxxxxxxxx@xxxxxxxxx.xxx>
+|   Date:   Tue May 12 07:44:35 2020 +0900
+|
+|       add test to test
+|
+* commit 6e8a1e7b11668f66c60b45c5ce955ccb165cf761
+| Author: xxxxxxxxx <xxxxxxxxx@xxxxxxxxx.xxx>
+| Date:   Mon May 11 08:06:14 2020 +0900
+|
+|     test
+|
+
+```
+
+### git checkout -b - ブランチを作成し切り替える
+
+```sh
+$ git branch
+* master
+$ git checkout -b test
+Switched to a new branch 'test'
+$ git branch
+  master
+* test
+```
+
+### git merge - ブランチをマージ
+
+- `--no-ff`でマージコミットメッセージを記入するためのエディタが立ち上がる
+
+```sh
+$ git checkout master
+Switched to branch 'master'* master
+$ git merge --no-ff test
+Merge made by the 'recursive' strategy.
+ test | 4 ++++
+ 1 file changed, 4 insertions(+)
+```
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
@@ -130,6 +181,8 @@ fatal: Exiting because of an unresolved conflict.
   - ワークツリーにある全てのファイルのその時点の状態を記録すること
 - ステージ(インデックス)エリア
   - コミットをする前の一時領域
+- トピックブランチ
+  - １つのトピックに集中して他の作業は一切行わないブランチ
   
 ## 参考 URL
 
