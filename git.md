@@ -144,7 +144,7 @@ Merge made by the 'recursive' strategy.
  1 file changed, 4 insertions(+)
 ```
 
-### git reset --hard コミットハッシュ
+### git reset --hard コミットハッシュ - コミットを元に戻す
 
 ```sh
 $ git log
@@ -159,7 +159,14 @@ Author: xxxxxxxxx <xxxxxxxxx@xxxxxxxxx.xxx>
 Date:   Sat May 9 08:57:05 2020 +0900
 
     First Commit
+$ git reset --hard 9b7066ce13139b01c4b0062da33eb0ae85c0bc64
+HEAD is now at 9b7066c First Commit
+$ git log
+commit 9b7066ce13139b01c4b0062da33eb0ae85c0bc64 (HEAD -> master)
+Author: xxxxxxxxx <xxxxxxxxx@xxxxxxxxx.xxx>
+Date:   Sat May 9 08:57:05 2020 +0900
 
+    First Commit
 ```
 
 ### フロー
