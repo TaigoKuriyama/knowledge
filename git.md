@@ -189,8 +189,9 @@ b1ef120 HEAD@{6}: merge test: Merge made by the 'recursive' strategy.
 3fad247 HEAD@{11}: commit: test
 4b420e0 HEAD@{12}: commit: test
 9b7066c (HEAD -> master) HEAD@{13}: commit (initial): First Commit
-
 ```
+
+### git rebase -i - 過去のコミットを改変する
 
 ### フロー
 
