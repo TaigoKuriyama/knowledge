@@ -193,6 +193,13 @@ b1ef120 HEAD@{6}: merge test: Merge made by the 'recursive' strategy.
 
 ### git rebase -i - 過去のコミットを改変する
 
+- 最新のコミットを１つ前のコミットに含める
+   - １つ前のコミットに間違えが見つかった時に、修正したコミットを使って改竄するイメージ
+
+```sh
+$ git rebase -i HEAD-2
+```
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
