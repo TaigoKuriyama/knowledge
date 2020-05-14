@@ -200,6 +200,27 @@ b1ef120 HEAD@{6}: merge test: Merge made by the 'recursive' strategy.
 $ git rebase -i HEAD-2
 ```
 
+### git remote add - リモートリポジトリを登録
+
+- origin という識別子で`https://github.com/TaigoKuriyama/git-test.git`を指すようになる
+
+```sh
+$ git remote add origin https://github.com/TaigoKuriyama/git-test.git
+$ cat .git/config
+[remote "origin"]
+	url = https://github.com/TaigoKuriyama/git-test.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
+### git push - リモートリポジトリへ送信
+
+- 初めてブランチを Push するときに`-u`オプションをつけることを推奨
+- origin の master ブランチに現在のブランチの内容を送信
+
+```sh
+$ git push -u origin master
+```
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
@@ -242,6 +263,8 @@ $ git commit -m "resolve conflict"
   - コミットをする前の一時領域
 - トピックブランチ
   - １つのトピックに集中して他の作業は一切行わないブランチ
+- 上流ブランチ
+  - あるローカルブランチが、履歴を追跡するように設定したリモートブランチの事
   
 ## 参考 URL
 
