@@ -1,5 +1,6 @@
 - Magic Trackpad の反応がなくなった時
   - Shift + Option を押しながら、メニューバーのBluetoothアイコンをクリックし、[デバッグ] > [すべての接続中のAppleデバイスを出荷状態にリセット]
+  - さらに Trackpad 自体の物理スイッチをオフオンすると直ることもある
   - https://info.yama-lab.com/%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E6%99%82%E3%81%AE%E3%82%AB%E3%83%81%E3%81%A3%E3%81%A8%E3%81%84%E3%81%86%E5%8F%8D%E5%BF%9C%E3%81%8C%E3%81%AA%E3%81%84%E3%80%82/
 - 充電・給電モードの違い
   - https://www.omoide-soko.jp/apps/wordpress/pc/1852#i-3
