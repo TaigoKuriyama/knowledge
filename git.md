@@ -252,6 +252,30 @@ $ git branch -a
   remotes/origin/test
 ```
 
+### リモートリポジトリのブランチをチェックアウト
+
+```sh
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/test
+$ git checkout -b test origin/test
+Branch rebase set up to track remote branch rebase from origin.
+Switched to a new branch 'test'
+(base) TK2:git-test taigokuriyama$ git branch
+  master
+* test
+```
+
+### git pull - 
+
+```sh
+
+```
+
+- [Git 再入門: 引数がない git pull のデフォルトの挙動 (アップストリーム, トラッキングブランチについて)](https://www.yunabe.jp/docs/relearning_git_pull_default.html)
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
