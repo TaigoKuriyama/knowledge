@@ -221,6 +221,37 @@ $ cat .git/config
 $ git push -u origin master
 ```
 
+### git clone - リモートリポジトリを取得
+
+- git clone 直後は master ブランチにいる
+
+```sh
+$ git clone https://github.com/TaigoKuriyama/git-test.git
+Cloning into 'git-test'...
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 21 (delta 5), reused 19 (delta 3), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+$ cd git-test/
+$ git branch
+* master
+```
+
+### git branch - 現在のブランチを表示
+
+- `-a`オプションでリモートリポジトリのブランチも表示
+
+```sh
+$ git branch
+* master
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/test
+```
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
