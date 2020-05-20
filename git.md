@@ -279,8 +279,8 @@ Switched to a new branch 'test'
 ### pull request の流れ
 
 - fork する
-   - clone するものだと思っていた
-- fork したリポジトリでトピックブランチを作成
+- fork したリポジトリを clone する
+- clone したリポジトリでトピックブランチを作成
 - コードを修正
 - git add, commit
 - 元のリポジトリに pull request を送る
