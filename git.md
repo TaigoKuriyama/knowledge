@@ -276,6 +276,16 @@ Switched to a new branch 'test'
 
 - [Git 再入門: 引数がない git pull のデフォルトの挙動 (アップストリーム, トラッキングブランチについて)](https://www.yunabe.jp/docs/relearning_git_pull_default.html)
 
+### pull request の流れ
+
+- fork する
+   - clone するものだと思っていた
+- fork したリポジトリでトピックブランチを作成
+- コードを修正
+- git add, commit
+- 元のリポジトリに pull request を送る
+
+
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
