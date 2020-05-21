@@ -268,13 +268,26 @@ Switched to a new branch 'test'
 * test
 ```
 
+### git fetch - 
+
+- リモートリポジトリの最新の履歴の取得だけを行う
+
+```sh
+
+```
+
 ### git pull - 
+
+- リモートリポジトリの内容を取得し、マージする
+   - git fetch + merge
 
 ```sh
 
 ```
 
 - [Git 再入門: 引数がない git pull のデフォルトの挙動 (アップストリーム, トラッキングブランチについて)](https://www.yunabe.jp/docs/relearning_git_pull_default.html)
+
+
 
 ### pull request の流れ
 
