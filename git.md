@@ -131,6 +131,12 @@ $ git branch
 * test
 ```
 
+### git branch -D - ブランチを削除
+
+```sh
+$ git branch -D test
+```
+
 ### git merge - ブランチをマージ
 
 - `--no-ff`でマージコミットメッセージを記入するためのエディタが立ち上がる
