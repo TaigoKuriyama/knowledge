@@ -311,8 +311,14 @@ Switched to a new branch 'test'
 
 - [2.2 Git の基本 - 変更内容のリポジトリへの記録](https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2)
 
+### git flow
 
-## 応用
+- master ブランチは常にデプロイできる状態とする
+- 新しい作業をするときは、masterブランチから記述的な名前のブランチを作成する
+   - 記述的とはブランチの特性を明確に著した
+- 同名のブランチを GitHub のリポジトリに定期的に push する
+- Pull Request を送り、レビューをしてもらう
+- master ブランチにマージし、直ちにデプロイする
 
 ### コミットメッセージの変更
 
