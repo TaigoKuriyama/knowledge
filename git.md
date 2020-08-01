@@ -20,7 +20,14 @@ $ ls .git/
 HEAD		description	info		refs
 config		hooks		objects
 ```
+### git config
 
+- git config
+	- /etc/gitconfig ファイル: システム上の全てのユーザーと全てのリポジトリに対する設定値を保持
+	- ~/.gitconfig か ~/.config/git/config ファイル: 特定のユーザーに対する設定値を保持
+		- --global オプションを指定することで、Gitに、明確にこのファイルに読み書きを行なわせることができる
+	- 現在使っているリポジトリのGitディレクトリにある`config`ファイル(`.git/config`のことです): 特定の 単一リポジトリに対する設定
+	
 ### git status - リポジトリ の状態を確認
 
 - master ブランチにいて、コミット対象が存在しない
@@ -52,8 +59,6 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-
-
 
 ### git add
 
@@ -89,6 +94,12 @@ $ git diff
 
 ```sh
 $ git diff --staged
+```
+
+- tool で確認する
+
+```sh
+$ git difftool
 ```
 
 ### git commit - リポジトリの歴史を記録
