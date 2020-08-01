@@ -378,6 +378,10 @@ $ git add conflict_file
 $ git commit -m "resolve conflict"
 ```
 
+### .gitignore
+
+- [Python.gitignore](https://github.com/github/gitignore/blob/master/Python.gitignore)
+
 ## 用語
 
 - リポジトリ
