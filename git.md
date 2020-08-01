@@ -27,7 +27,13 @@ config		hooks		objects
 	- ~/.gitconfig か ~/.config/git/config ファイル: 特定のユーザーに対する設定値を保持
 		- --global オプションを指定することで、Gitに、明確にこのファイルに読み書きを行なわせることができる
 	- 現在使っているリポジトリのGitディレクトリにある`config`ファイル(`.git/config`のことです): 特定の 単一リポジトリに対する設定
-	
+
+```sh
+$ git config --global user.name "xxxxxxx"
+$ git config --global user.email xxxxxxx@xxxxx.xxx
+$ git config --global core.editor vim
+```
+
 ### git status - リポジトリ の状態を確認
 
 - master ブランチにいて、コミット対象が存在しない
