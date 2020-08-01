@@ -79,6 +79,18 @@ Changes to be committed:
 	new file:   README.md
 ```
 
+### git diff - 変更したけどまだステージしていない変更を確認
+
+```sh
+$ git diff
+```
+
+- ステージされている変更と直近のコミットの内容を比較する場合
+
+```sh
+$ git diff --staged
+```
+
 ### git commit - リポジトリの歴史を記録
 
 - `git commit`コマンドはステージ領域に登録されている時点のファイル群を実際にリポジトリの歴史として記録する
