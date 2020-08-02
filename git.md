@@ -20,6 +20,7 @@ $ ls .git/
 HEAD		description	info		refs
 config		hooks		objects
 ```
+
 ### git config
 
 - git config
@@ -149,7 +150,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ```sh
 $ git rm --cached README
-
 ```
 
 ### git mv
@@ -225,6 +225,72 @@ Rakefile | 23 +++++++++++++++++++++++ lib/simplegit.rb | 25 ++++++++++++++++++++
  $ git log --pretty=format:"%h - %an, %ar : %s"
 ca82a6d - Scott Chacon, 6 years ago : changed the version number 085bb3b - Scott Chacon, 6 years ago : removed unnecessary test a11bef0 - Scott Chacon, 6 years ago : first commit
 ```
+
+- `--since`：時間制限のオプション
+
+```sh
+$ git log --since=2.weeks
+```
+
+- `-S`：任意の文字列を引数にでき、その文字列が追加・削除されたコミットのみを抜き出す
+
+```sh
+$ git log -Sfunction_name
+```
+
+### git remote - リモート Git リポジトリにアクセスしやすいような名前をつけて追加
+
+- 新しいリモート Git リポジトリにアクセスしやすいような名前をつけて追加する
+  - どういう時に使うのかはわからん
+
+```sh
+$ git remote
+origin
+$ git remote add pb https://github.com/paulboone/ticgit
+$ git remote -v
+origin https://github.com/schacon/ticgit (fetch) origin https://github.com/schacon/ticgit (push)
+pb https://github.com/paulboone/ticgit (fetch)
+pb https://github.com/paulboone/ticgit (push)
+```
+
+### git tag - 歴史上の重要なポイントに印をつける
+
+- 既存のタグの一覧を表示
+
+```sh
+$ git tag
+v0.1
+v1.3
+```
+
+- タグの作成
+  - タグには軽量 (lightweight) 版と注釈付き (annotated) 版の二通りがある
+
+- 現在のHEADが指しているコミットに注釈付きタグを付与する
+
+```sh
+$ git tag -a v1.4 -m "my version 1.4"
+$ git show v1.4
+tag v1.4
+Tagger: Ben Straub <ben@straub.cc> Date: Sat May 3 20:19:12 2014 -0700
+my version 1.4
+commit ca82a6dff817ec66f44342007202690a93763949 Author: Scott Chacon <schacon@gee-mail.com> Date: Mon Mar 17 21:52:11 2008 -0700
+      changed the version number
+```
+
+- 現在のHEADが指しているコミットに軽量タグを付与する
+
+```sh
+$ git tag v1.4-lw $ git tag
+v0.1
+v1.3
+v1.4 v1.4-lw v1.5
+$ git show v1.4-lw
+commit ca82a6dff817ec66f44342007202690a93763949 Author: Scott Chacon <schacon@gee-mail.com> Date: Mon Mar 17 21:52:11 2008 -0700
+      changed the version number
+
+```
+
 
 ### git checkout -b - ブランチを作成し切り替える
 
@@ -329,6 +395,7 @@ $ cat .git/config
 
 - 初めてブランチを Push するときに`-u`オプションをつけることを推奨
 - origin の master ブランチに現在のブランチの内容を送信
+  - git push [remote-name] [branch-name]
 
 ```sh
 $ git push -u origin master
@@ -353,7 +420,7 @@ $ git branch
 
 ### git branch - 現在のブランチを表示
 
-- `-a`オプションでリモートリポジトリのブランチも表示
+- `-a` オプションでリモートリポジトリのブランチも表示
 
 ```sh
 $ git branch
@@ -381,18 +448,21 @@ Switched to a new branch 'test'
 * test
 ```
 
-### git fetch - 
+### git fetch - リモートリポジトリの最新の履歴の取得だけを行う
 
 - リモートリポジトリの最新の履歴の取得だけを行う
+  - remote-name とは `git remote -v` で表示される名前でデフォルトは `origin`
 
 ```sh
-
+$ git fetch [remote-name]
 ```
+
+
 
 ### git pull - 
 
 - リモートリポジトリの内容を取得し、マージする
-   - git fetch + merge
+  - git fetch + merge
 
 ```sh
 
@@ -411,7 +481,6 @@ Switched to a new branch 'test'
 - git add, commit
 - 元のリポジトリに pull request を送る
 
-
 ### フロー
 
 ![スクリーンショット 2020-05-09 9 05 30](https://user-images.githubusercontent.com/20186020/81458244-64e45000-91d4-11ea-87cd-dd01599efbd2.png)
@@ -422,12 +491,16 @@ Switched to a new branch 'test'
 
 - master ブランチは常にデプロイできる状態とする
 - 新しい作業をするときは、masterブランチから記述的な名前のブランチを作成する
-   - 記述的とはブランチの特性を明確に著した
+  - 記述的とはブランチの特性を明確に著した
 - 同名のブランチを GitHub のリポジトリに定期的に push する
 - Pull Request を送り、レビューをしてもらう
 - master ブランチにマージし、直ちにデプロイする
 
-### コミットメッセージの変更
+### コミットのやり直し
+
+- ステージングエリアの内容をコミットに使用する
+  - 直近のコミット以降に何も変更をし ていない場合 (たとえば、コミットの直後にこのコマンドを実行したような場合)、 スナップショットの内容 はまったく同じでありコミットメッセージを変更することになる
+- 最終的にできあがるのはひとつのコミット。二番目のコミットが、最初のコミットの結果を上書きする
 
 ```sh
 $ git commit --amend
