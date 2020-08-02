@@ -149,11 +149,20 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ```sh
 $ git rm --cached README
+
 ```
 
 ### git mv
 
+- ファイル名を変更してステージする
 
+```sh
+$ git mv README.md README
+$ git status
+On branch master
+Changes to be committed:
+(use "git reset HEAD <file>..." to unstage) renamed: README.md -> README
+```
 
 ### git log - コミットログを確認
 
@@ -164,7 +173,6 @@ $ git log
 commit 6e8a1e7b11668f66c60b45c5ce955ccb165cf761 (HEAD -> master)
 Author: xxxxxxxxx <xxxxxxxxx@xxxxxx.xxx>
 Date:   Mon May 11 08:06:14 2020 +0900
-
     test
 ```
 
@@ -191,7 +199,31 @@ $ git log --graph
 |
 |     test
 |
+```
 
+- ` --stat`：各コミットエントリに続けて変更されたファイルの一覧と変更されたフ ァイルの数、追加・削除された行数が表示
+
+```sh
+ $ git log --stat
+commit ca82a6dff817ec66f44342007202690a93763949 Author: Scott Chacon <schacon@gee-mail.com> Date: Mon Mar 17 21:52:11 2008 -0700
+      changed the version number
+Rakefile | 2 +-
+1 file changed, 1 insertion(+), 1 deletion(-)
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 Author: Scott Chacon <schacon@gee-mail.com> Date: Sat Mar 15 16:40:33 2008 -0700
+      removed unnecessary test
+lib/simplegit.rb | 5 -----
+1 file changed, 5 deletions(-)
+commit a11bef06a3f659402fe7563abf99ad00de2209e6 Author: Scott Chacon <schacon@gee-mail.com> Date: Sat Mar 15 10:31:28 2008 -0700
+first commit
+README | 6 ++++++
+Rakefile | 23 +++++++++++++++++++++++ lib/simplegit.rb | 25 +++++++++++++++++++++++++ 3 files changed, 54 insertions(+)
+```
+
+- `--pretty`：独自のログ出力フォーマットを指定
+
+```sh
+ $ git log --pretty=format:"%h - %an, %ar : %s"
+ca82a6d - Scott Chacon, 6 years ago : changed the version number 085bb3b - Scott Chacon, 6 years ago : removed unnecessary test a11bef0 - Scott Chacon, 6 years ago : first commit
 ```
 
 ### git checkout -b - ブランチを作成し切り替える
