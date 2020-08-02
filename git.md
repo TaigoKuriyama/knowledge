@@ -119,6 +119,42 @@ $ git commit -m "First Commit"
  create mode 100644 README.md
 ```
 
+### git rm - ファイルの削除をステージする
+
+- ファイルの削除をステージする
+
+```sh
+$ git rm PROJECTS.md
+rm 'PROJECTS.md'
+$ git status
+On branch master
+Changes to be committed:
+(use "git reset HEAD <file>..." to unstage) deleted: PROJECTS.md
+```
+
+普通に rm すると、not updated” (つまり ステージされていない) 欄に表示される
+
+```sh
+ $ rm PROJECTS.md
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'. Changes not staged for commit:
+(use "git add/rm <file>..." to update what will be committed)
+(use "git checkout -- <file>..." to discard changes in working directory)
+deleted: PROJECTS.md
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+- ファイル自体は作業ツリーに残しつ つステージングエリアからの削除だけを行う
+
+```sh
+$ git rm --cached README
+```
+
+### git mv
+
+
+
 ### git log - コミットログを確認
 
 - リポジトリにコミットされたログを確認
