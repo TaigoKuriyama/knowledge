@@ -62,7 +62,7 @@ Command ＋ K → V
     "terminal.ansiRed": "#EA51B2",
     "terminal.ansiWhite": "#E9E9F4",
     "terminal.ansiYellow": "#00F769"
-  },,
+  },
 "[json]": {
 
   "editor.quickSuggestions": {
